@@ -22,14 +22,62 @@
     <main class="main-content">
        <h1 class="visually-hidden">Гостиницы в Седоне</h1>
         <section class="filters">
-            <form action=""></form>
+            <form action="https://echo.htmlacademy.ru" method="post" class="filters-form">
+                <fieldset>
+                    <legend>Инфраструктура:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input type="checkbox" name="pool" id="filter-pool" class="visually-hidden filter-input filter-input-checkbox" checked>
+                            <label for="filter-pool">Бассейн</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" name="parking" id="filter-parking" class="visually-hidden filter-input filter-input-checkbox">
+                            <label for="filter-parking">Парковка</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" name="wifi" id="filter-wifi" class="visually-hidden filter-input filter-input-checkbox">
+                            <label for="filter-wifi">Wi-Fi</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья:</legend>
+                    <ul>
+                        <li class="filter-option">
+                            <input type="checkbox" name="hotel" id="filter-hotel" class="visually-hidden filter-input filter-input-checkbox" checked>
+                            <label for="filter-hotel">Гостиница</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" name="motel" id="filter-motel" class="visually-hidden filter-input filter-input-checkbox" checked>
+                            <label for="filter-motel">Мотель</label>
+                        </li>
+                        <li class="filter-option">
+                            <input type="checkbox" name="apartments" id="filter-apartments" class="visually-hidden filter-input filter-input-checkbox" checked>
+                            <label for="filter-apartments">Апартаменты</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <ul>
+                        <li class="price-option">
+                            <label>От <input type="number" name="min-price" id="field-min-price" value="0" min="0" max="3000"></label>                        
+                        </li>
+                        <li class="price-option">
+                            <label>До <input type="number" name="max-price" id="field-max-price" value="3000" min="0" max="3000"></label>
+                        </li>
+                    </ul>
+                    <div class="price-range"></div>
+                    <button type="submit" class="btn-price">Показать</button>
+                </fieldset>
+            </form>
         </section>
         <section class="result">
             <h2 class="visually-hidden">Результат поиска гостиницы в Седоне</h2>
             <p class="result-text">Найдено: 3</p>
             <p class="result-sorting">Сортировка</p>
             <ul class="result-list">
-                <li class="result-item-current"><button class="result-btn">по цене</button>></li>
+                <li class="result-item-current"><button class="result-btn">по цене</button></li>
                 <li><button class="result-btn">по типу</button></li>
                 <li><button class="result-btn">по рейтингу</button></li>
             </ul>
@@ -43,7 +91,7 @@
                     <p class="hotels-item-type">Гостиница</p>
                     <p class="hotels-item-price">От 4000 Р.</p>
                     <a href="#" class="btn hotels-btn">Подробнее:</a>
-                    <button class="btn booking-btn">Забронировать</button>
+                    <button type="submit"  class="btn booking-btn">Забронировать</button>
                     <p class="hotels-rate">Рейтинг:8,5</p>
                 </li>
                 <li class="hotels-item">
@@ -52,7 +100,7 @@
                     <p class="hotels-item-type">Мотель</p>
                     <p class="hotels-item-price">От 3000 Р.</p>
                     <a href="#" class="btn hotels-btn">Подробнее:</a>
-                    <button class="btn booking-btn">Забронировать</button>
+                    <button type="submit" class="btn booking-btn">Забронировать</button>
                     <p class="hotels-rate">Рейтинг:8,9</p>
                 </li>
                 <li class="hotels-item">
@@ -61,7 +109,7 @@
                     <p class="hotels-item-type">Апартаменты</p>
                     <p class="hotels-item-price">От 2000 Р.</p>
                     <a href="#" class="btn hotels-btn">Подробнее:</a>
-                    <button class="btn booking-btn">Забронировать</button>
+                    <button type="submit"  class="btn booking-btn">Забронировать</button>
                     <p class="hotels-rate">Рейтинг:9.2</p>
                 </li>
              </ul>

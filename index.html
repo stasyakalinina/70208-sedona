@@ -88,7 +88,21 @@
             <button class="btn" type="button" title="Поиск гостиницы">
                 Поиск гостиницы в седоне
             </button>
-            <form action=""></form>
+            <form action="https://echo.htmlacademy.ru" method="post" class="search-form">
+                <p class="search-item">
+                    <label>Дата заезда: <input type="text" name="check-in" id="field-check-in" placeholder="24 апреля 2018"></label>   
+                </p>
+                <p class="search-item">
+                   <label>Дата выезда: <input type="date" name="check-out" id="field-check-out"></label>
+                </p>
+                <p class="search-item search-item--half">
+                    <label>Взрослые: <input type="number" name="adults" id="field-adults" min="0" max="10"></label>
+                </p>
+                <p class="search-item search-item--half">
+                    <label>Дети: <input type="number" name="children" id="field-children" min="0" max="10"></label>
+                </p>
+                <button type="submit" class="btn btn-search">Найти</button>
+            </form>
         </section>
         <section class="map">
             <img src="img/map.jpg" alt="Карта Седоны" width="1200" height="593">
