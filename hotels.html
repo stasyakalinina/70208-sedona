@@ -23,7 +23,7 @@
        <h1 class="visually-hidden">Гостиницы в Седоне</h1>
         <section class="filters">
             <form action="https://echo.htmlacademy.ru" method="get" class="filters-form">
-                <fieldset>
+                <fieldset class="filter filter-infrastructure">
                     <legend>Инфраструктура:</legend>
                     <ul>
                         <li class="filter-option">
@@ -40,7 +40,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter filter-lodging">
                     <legend>Тип жилья:</legend>
                     <ul>
                         <li class="filter-option">
@@ -57,17 +57,21 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter-range">
                     <legend>Стоимость в сутки (Р):</legend>
-                    <ul>
+                    <ul class="price-controls">
                         <li class="price-option">
-                            <label>От <input type="number" name="min-price" id="field-min-price" value="0" min="0" max="3000"></label>                        
+                            <label class="price-option-min" aria-label="Цена от">От <input class="visually-hidden" type="number" name="min-price" id="field-min-price" value="0" min="0" max="3000"></label>               
                         </li>
                         <li class="price-option">
-                            <label>До <input type="number" name="max-price" id="field-max-price" value="3000" min="0" max="3000"></label>
+                            <label class="price-option-max" aria-label="Цена до">До <input class="visually-hidden" type="number" name="max-price" id="field-max-price" value="3000" min="0" max="3000"></label>
                         </li>
                     </ul>
-                    <div class="price-range"></div>
+                    <ul class="range-controls">
+                        <li class="range-controls__scale"></li>
+                        <li class="range-controls__btn range-controls__btn--min"></li>
+                        <li class="range-controls__btn range-controls__btn--max"></li>
+                    </ul>
                     <button type="submit" class="btn-price">Показать</button>
                 </fieldset>
             </form>
