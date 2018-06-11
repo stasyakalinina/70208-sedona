@@ -61,17 +61,17 @@
                     <legend>Стоимость в сутки (Р):</legend>
                     <ul class="price-controls">
                         <li class="price-option">
-                            <label class="price-option-min" aria-label="Цена от">От <input class="visually-hidden" type="number" name="min-price" id="field-min-price" value="0" min="0" max="3000"></label>               
+                            <label class="price-option-min" aria-label="Цена от">От <input class="price-option__input" type="number" name="min-price" id="field-min-price" value="0" min="0" max="3000"></label>               
                         </li>
                         <li class="price-option">
-                            <label class="price-option-max" aria-label="Цена до">До <input class="visually-hidden" type="number" name="max-price" id="field-max-price" value="3000" min="0" max="3000"></label>
+                            <label class="price-option-max" aria-label="Цена до">До <input class="price-option__input" type="number" name="max-price" id="field-max-price" value="3000" min="0" max="3000"></label>
                         </li>
                     </ul>
-                    <ul class="range-controls">
-                        <li class="range-controls__scale"></li>
-                        <li class="range-controls__btn range-controls__btn--min"></li>
-                        <li class="range-controls__btn range-controls__btn--max"></li>
-                    </ul>
+                    <div class="range-controls">
+                        <div class="range-controls__scale"></div>
+                        <div class="range-controls__btn range-controls__btn--min"></div>
+                        <div class="range-controls__btn range-controls__btn--max"></div>
+                    </div>
                     <button type="submit" class="btn-price">Показать</button>
                 </fieldset>
             </form>
@@ -95,7 +95,7 @@
                     <p class="hotels-item-type">Гостиница</p>
                     <p class="hotels-item-price">От 4000 Р.</p>
                     <a href="#" class="btn hotels-btn">Подробнее:</a>
-                    <a href="#"class="btn booking-btn">Забронировать</a>
+                    <a href="#" class="btn booking-btn">Забронировать</a>
                     <p class="hotels-rate">Рейтинг:8,5</p>
                 </li>
                 <li class="hotels-item">
