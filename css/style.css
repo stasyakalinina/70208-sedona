@@ -16,9 +16,8 @@
     src:
         local('PT Sans'),
         local('PTSans-Bold'),
-        url('../fonts/ptsansbold.woff'),
-        url('ptsans.woff2') format('woff2'),      
-        url('ptsans.woff') format('woff');
+        url('../fonts/ptsansbold.woff') format('woff'),
+        url('../fonts/ptsansbold.woff2') format('woff2'); 
 }
 
 body {
@@ -233,6 +232,8 @@ a {
 
 .causes-item h3 {
     margin-bottom: 45px;
+    
+    font-size: 21px;
 }
 
 .search {
