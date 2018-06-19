@@ -68,14 +68,12 @@ input[type="radio"].visually-hidden {
     max-width: 1200px;
     min-width: 768px;
     margin: 0 auto;
+    
+/*
+    -webkit-box-shadow: 0 0 8px 5px #dedede;    
+            box-shadow: 0 0 8px 5px #dedede;
+*/
 }
-
-.main-content {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 
 .site-navigation,
 .features-list,
@@ -164,11 +162,13 @@ input[type="radio"].visually-hidden {
     padding-bottom: 91px;
     text-align: center;
     
-    background-color: #333d41;
-    background-image: url(../img/background.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #333d41;      
+    background-position: center;
+    background-image: url(../img/shape.png),
+        url(../img/background.jpg);
+    background-position: center bottom, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
 }
 
 .intro {
@@ -659,9 +659,6 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     padding: 30px 72px;
     
     border-top: 1px solid #f2f2f2;
@@ -695,8 +692,6 @@ input[type="radio"].visually-hidden {
 }
 
 .more-btn {
-    
-    
     font-size: 14px;
     line-height: 21px;
     
@@ -735,6 +730,8 @@ input[type="radio"].visually-hidden {
 .hotels-rate {
     width: 110px;
     margin-left: auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     
     background-color: #f2f2f2;
 }
