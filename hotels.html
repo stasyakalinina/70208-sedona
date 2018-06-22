@@ -31,16 +31,16 @@
                         <legend>Инфраструктура:</legend>
                         <ul>
                             <li class="filter-option">
-                                <input type="checkbox" name="pool" id="filter-pool" class="visually-hidden filter-input filter-input-checkbox" checked>
-                                <label for="filter-pool">Бассейн</label>
+                                <input type="checkbox" name="pool" id="filter-pool" class="visually-hidden" checked>
+                                <label for="filter-pool" class="filter-checkbox">Бассейн</label>
                             </li>
                             <li class="filter-option">
-                                <input type="checkbox" name="parking" id="filter-parking" class="visually-hidden filter-input filter-input-checkbox">
-                                <label for="filter-parking">Парковка</label>
+                                <input type="checkbox" name="parking" id="filter-parking" class="visually-hidden">
+                                <label for="filter-parking" class="filter-checkbox">Парковка</label>
                             </li>
                             <li class="filter-option">
-                                <input type="checkbox" name="wifi" id="filter-wifi" class="visually-hidden filter-input filter-input-checkbox">
-                                <label for="filter-wifi">Wi-Fi</label>
+                                <input type="checkbox" name="wifi" id="filter-wifi" class="visually-hidden">
+                                <label for="filter-wifi" class="filter-checkbox">Wi-Fi</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -48,33 +48,31 @@
                         <legend>Тип жилья:</legend>
                         <ul>
                             <li class="filter-option">
-                                <input type="checkbox" name="hotel" id="filter-hotel" class="visually-hidden filter-input filter-input-checkbox" checked>
-                                <label for="filter-hotel">Гостиница</label>
+                                <input type="checkbox" name="hotel" id="filter-hotel" class="visually-hidden" checked>
+                                <label for="filter-hotel" class="filter-checkbox">Гостиница</label>
                             </li>
                             <li class="filter-option">
                                 <input type="checkbox" name="motel" id="filter-motel" class="visually-hidden filter-input filter-input-checkbox" checked>
-                                <label for="filter-motel">Мотель</label>
+                                <label for="filter-motel" class="filter-checkbox">Мотель</label>
                             </li>
                             <li class="filter-option">
                                 <input type="checkbox" name="apartments" id="filter-apartments" class="visually-hidden filter-input filter-input-checkbox" checked>
-                                <label for="filter-apartments">Апартаменты</label>
+                                <label for="filter-apartments" class="filter-checkbox">Апартаменты</label>
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset class="filter-set filter-range">
                         <legend>Стоимость в сутки (Р):</legend>
-                        <ul class="price-controls">
-                            <li class="price-option">
-                                <label class="price-option-min" aria-label="Цена от">От <input class="price-option-input" type="text" name="min-price" id="field-min-price" placeholder="0"></label>               
-                            </li>
-                            <li class="price-option">
-                                <label class="price-option-max" aria-label="Цена до">До <input class="price-option-input" type="text" name="max-price" id="field-max-price" placeholder="3000" ></label>
-                            </li>
-                        </ul>
+                        <div class="price-controls">
+                            <label class="price-min" aria-label="Цена от">От <input class="price-option-input" type="text" name="min-price" id="field-min-price" value="0"></label>               
+                            <label class="price-max" aria-label="Цена до">До <input class="price-option-input" type="text" name="max-price" id="field-max-price" value="3000" ></label>
+                        </div>
                         <div class="range-controls">
-                            <div class="range-controls-scale"></div>
-                            <div class="range-controls-btn range-controls-min"></div>
-                            <div class="range-controls-btn range-controls-max"></div>
+                            <div class="range-scale">
+                                <div class="range-bar"></div>
+                            </div>
+                            <div class="range-toggle range-toggle-min"></div>
+                            <div class="range-toggle range-toggle-max"></div>
                         </div>
                         <button type="submit" class="btn btn-price">Показать</button>
                     </fieldset>
@@ -89,6 +87,10 @@
                     <li><a href="#" class="result-btn">по типу</a></li>
                     <li><a href="#" class="result-btn">по рейтингу</a></li>
                 </ul>
+                <div class="result-icon">
+                    <a class="result-icon-up" href="#"></a>
+                    <a class="result-icon-down result-active" href="#"></a>
+                </div>
             </section>
             <section class="hotels">
                  <h2 class="visually-hidden">Список гостиниц Седоны</h2>
@@ -104,7 +106,15 @@
                                 <a href="#" class="btn booking-btn">Забронировать</a>
                             </div>
                         </div>
-                        <span class="hotels-rate">Рейтинг: 8,5</span>
+                        <div class="hotels-rate">
+                            <div class="rate-stars" aria-label="4*">
+                                <span class="star">*</span>
+                                <span class="star">*</span>
+                                <span class="star">*</span>
+                                <span class="star">*</span>
+                            </div>
+                            <span class="rate-number">Рейтинг: 8,5</span>
+                        </div>
                     </li>
                     <li class="hotels-item">
                         <img src="img/quail-inn.jpg" alt="Desert Quail Inn" width="135" height="90">
@@ -117,7 +127,14 @@
                                 <a href="#"class="btn booking-btn">Забронировать</a>
                             </div>
                         </div>
-                        <span class="hotels-rate">Рейтинг: 8,9</span>
+                        <div class="hotels-rate"> 
+                            <div class="rate-stars" aria-label="3*">
+                                <span class="star">*</span>
+                                <span class="star">*</span>
+                                <span class="star">*</span>
+                            </div>
+                            <span class="rate-number">Рейтинг: 8,9</span>
+                        </div>
                     </li>
                     <li class="hotels-item">
                         <img src="img/villas-poco.jpg" alt="Villas at Poco Diablo" width="135" height="90">
@@ -130,7 +147,13 @@
                                 <a href="#"class="btn booking-btn">Забронировать</a>
                             </div>
                         </div>
-                        <span class="hotels-rate">Рейтинг: 9.2</span>
+                        <div class="hotels-rate" aria-label="2*">
+                            <div class="rate-stars">
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                            <span class="rate-number">Рейтинг: 9.2</span>
+                        </div>
                     </li>
                  </ul>
             </section>
