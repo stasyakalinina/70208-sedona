@@ -723,11 +723,9 @@ input[type="checkbox"]:checked + .filter-checkbox::after {
     background-repeat: no-repeat;
 }
 
-/*
 input[type="checkbox"]:disabled + label:before {
-    
+    border-color: rgba(0, 0, 0, 0.2);
 }
-*/
 
 /*
 input[type="checkbox"]:disabled + .filter-checkbox::after {
