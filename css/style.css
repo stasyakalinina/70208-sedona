@@ -462,6 +462,30 @@ input[type="radio"].visually-hidden {
     border: solid 2px #e5e5e5;
 }
 
+.search-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-form input::-moz-placeholder { /* Firefox 19+ */ 
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-form input:-ms-input-placeholder { /* IE 10+ */
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-form input:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .search-form label {
     font-weight: bold;
     line-height: 26px;
@@ -476,21 +500,30 @@ input[type="radio"].visually-hidden {
 
 .search-item .calendar{
     position: absolute; 
-    right: 15px;
-    top: 8px;
+    right: 0;
+    top: 0;
     
-    width: 25px;
-    height: 22px;
+    display: block;
+    width: 39px;
+    height: 38px;
+    padding: 0;
     
     background-color: transparent;
     border: none;
+    
+    cursor: pointer;
 }
 
 .calendar path{
     fill: #a9a9a9;
 }
 
-.calendar:hover path {
+.calendar:hover path,
+.calendar:focus path{
+    fill: #000000;
+}
+
+.calendar:active path {
     fill: #81b3d2;
 }
 
