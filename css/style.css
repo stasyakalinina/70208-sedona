@@ -376,7 +376,6 @@ input[type="radio"].visually-hidden {
 }
 
 .btn-search-hotels {
-        
     display: block;
     width: 568px;
     padding: 30px 0;
@@ -498,7 +497,7 @@ input[type="radio"].visually-hidden {
     width: 331px;
 }
 
-.search-item .calendar{
+.search-item .calendar {
     position: absolute; 
     right: 0;
     top: 0;
@@ -514,12 +513,12 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 
-.calendar path{
+.calendar path {
     fill: #a9a9a9;
 }
 
 .calendar:hover path,
-.calendar:focus path{
+.calendar:focus path {
     fill: #000000;
 }
 
@@ -537,11 +536,28 @@ input[type="radio"].visually-hidden {
     margin-bottom: 25px;
 }
 
-.search-amount input {
+.search-amount label {
+    margin-right: 41px;
+}
+
+.search-amount label:last-child {
+    margin-right: 27px;
+}
+
+.search-amount .search-item-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     
+}
+.search-amount input {
+    width: 38px;
 }
 
 .search-amount .amount-sign {
+    width: 38px;
+    
+/*    font-size: 0;*/
     
     background-color: #f2f2f2;
     border: none;

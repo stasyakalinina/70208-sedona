@@ -114,15 +114,18 @@
                        </button> 
                     </p>
                     <div class="search-amount">
-                        <p class="search-item">
-                            
-                            <label for="field-adults">Взрослые: </label>
-                            
-                            <button type="button" class="amount-sign" title="Минус">-</button><input type="number" name="adults" id="field-adults" min="0" max="10"><button type="button" class="amount-sign" title="Плюс">+</button>
-                        </p>
-                        <p class="search-item">
-                            <label for="field-children">Дети: </label><button type="button" class="amount-sign" title="Минус">-</button><input type="number" name="children" id="field-children" min="0" max="10"><button type="button" class="amount-sign" title="Плюс">+</button>
-                        </p>
+                        <div class="search-item">
+                            <label for="field-adults">Взрослые:</label>
+                            <div class="search-item-column">
+                                <button type="button" class="amount-sign amount-sign-minus" title="Минус">-</button><input type="text" name="adults" id="field-adults" value="2"><button type="button" class="amount-sign amount-sign-plus" title="Плюс">+</button>
+                            </div>
+                        </div>
+                        <div class="search-item">
+                            <label for="field-children">Дети:</label>
+                            <div class="search-item-column">
+                                <button type="button" class="amount-sign amount-sign-minus" title="Минус">-</button><input type="text" name="children" id="field-children" value="0"><button type="button" class="amount-sign amount-sign-plus" title="Плюс">+</button>
+                            </div>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-search">Найти</button>
                 </form>
