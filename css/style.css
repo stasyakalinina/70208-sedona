@@ -575,6 +575,16 @@ input[type="radio"].visually-hidden {
 
 .search-amount input {
     width: 38px;
+    height: 37px;
+    padding: 0;
+    text-align: center;
+    
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    
+    opacity: 1;
 }
 
 .search-amount .amount-sign {
@@ -658,7 +668,7 @@ input[type="radio"].visually-hidden {
     
     color: #000000;
     
-    background-color: #fefefe;
+    background-color: rgba(254, 254, 254, 0,9);
 }
 
 .footer-tag,
@@ -889,13 +899,11 @@ input[type="checkbox"]:focus + label::before {
     
     background: #ffffff;
     
-    -webkit-transform: translate(-50%, -50%);
-    
+    -webkit-transform: translate(-50%, -50%);    
             transform: translate(-50%, -50%);
 }
 
 .price-controls label {
-    
     font-size: 14px;
     line-height: 38px;
     vertical-align: top;
@@ -963,7 +971,6 @@ input[type="checkbox"]:focus + label::before {
 }
 
 .range-toggle:hover {
-    
     background: #1c4f80;
     
     -webkit-transform: scale(1.1);    
@@ -1003,7 +1010,7 @@ input[type="checkbox"]:focus + label::before {
     color: #000000;
     text-align: left;
     
-    background-color: #ffffff;
+    background-color: #fefefe;
 }
 
 .result-text {
@@ -1103,12 +1110,11 @@ input[type="checkbox"]:focus + label::before {
     border-color: #000000 transparent transparent transparent;
 }
 
-
 .hotels {
     color: #333333;
     text-align: left;
     
-    background-color: #ffffff;
+    background-color: #fefefe;
 }
 
 .hotels-item {
