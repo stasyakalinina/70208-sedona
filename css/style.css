@@ -68,7 +68,8 @@ input[type="radio"].visually-hidden {
     max-width: 1200px;
     min-width: 768px;
     margin: 0 auto;
-    
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+            box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
 .site-navigation,
@@ -100,6 +101,15 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.main-header .container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 72px;
+    padding-right: 72px;
+    
+    background-color: #ffffff;
+}
+
 .main-navigation {
     font-weight: bold;
     line-height: 26px;
@@ -123,6 +133,15 @@ input[type="radio"].visually-hidden {
 
 .site-navigation li {
     width: 20%;
+    padding: 15px 0;
+    text-align: center;
+}
+.site-navigation li:first-child {
+    text-align: left;
+}
+
+.site-navigation li:last-child {
+    text-align: right;
 }
 
 .site-navigation li:nth-child(2) {
@@ -131,8 +150,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a{
     display: block;
-    padding: 15px 47px;
-    
+ 
     vertical-align: middle;
     color: #000000;
 }
@@ -424,6 +442,8 @@ input[type="radio"].visually-hidden {
     padding: 55px;
     
     background-color: #ffffff;
+    -webkit-box-shadow: 0 8px 15px rgba(0, 1, 1, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 1, 1, 0.2);
 }
 
 .search-item {
@@ -465,24 +485,21 @@ input[type="radio"].visually-hidden {
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.search-form input::-moz-placeholder { /* Firefox 19+ */ 
-    color: #000000;
-    font-weight: bold;
-    text-transform: uppercase;
+    opacity: 1;
 }
 
 .search-form input:-ms-input-placeholder { /* IE 10+ */
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
+    opacity: 1;
 }
 
-.search-form input:-moz-placeholder { /* Firefox 18- */
+.search-form input::placeholder {
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
+    opacity: 1;
 }
 
 .search-form label {
@@ -536,31 +553,73 @@ input[type="radio"].visually-hidden {
     margin-bottom: 25px;
 }
 
-.search-amount label {
-    margin-right: 41px;
-}
-
-.search-amount label:last-child {
-    margin-right: 27px;
-}
-
 .search-amount .search-item-column {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     
 }
+
+.search-amount .field-adults {
+    margin-right: 41px;
+}
+
+.search-amount .field-children {
+    margin-right: 27px;
+}
+
 .search-amount input {
     width: 38px;
 }
 
 .search-amount .amount-sign {
+    position: relative;
+    
+    display: block;
     width: 38px;
     
-/*    font-size: 0;*/
+    font-size: 0;
     
     background-color: #f2f2f2;
     border: none;
+}
+
+.search-amount .amount-sign-minus::before {
+    content: "";
+    
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    
+    width: 12px;
+    height: 3px;
+    
+    border-radius: 1px;
+    background-color: #a9a9a9;
+}
+.search-amount .amount-sign-plus::before{
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 13px;
+    
+    width: 12px;
+    height: 3px;
+    
+    border-radius: 1px;
+    background-color: #a9a9a9;
+}
+.search-amount .amount-sign-plus::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 17.5px;
+    
+    width: 3px;
+    height: 12px;
+    
+    border-radius: 1px;
+    background-color: #a9a9a9;
 }
 
 .btn-search {
@@ -594,7 +653,7 @@ input[type="radio"].visually-hidden {
     
     color: #000000;
     
-    background-color: #ffffff;
+    background-color: #fefefe;
 }
 
 .footer-tag,
@@ -772,17 +831,15 @@ input[type="checkbox"]:checked + .filter-checkbox::after {
     background-repeat: no-repeat;
 }
 
-input[type="checkbox"]:disabled + label:before {
+input[type="checkbox"]:disabled + label::before {
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-/*
 input[type="checkbox"]:disabled + .filter-checkbox::after {
-    
+    background-image: url(../img/checkbox-on-disabled.svg);
 }
-*/
 
-input[type="checkbox"]:focus + label:before {
+input[type="checkbox"]:focus + label::before {
     outline: 3px solid #0dafdd;
 /*    outline: 5px auto -webkit-focus-ring-color;*/
 }
@@ -810,8 +867,7 @@ input[type="checkbox"]:focus + label:before {
         -ms-flex-align: center;
             align-items: center;
     
-    font-size: 0;
-    
+
     border: 2px solid #ffffff;
     border-radius: 2px;
 }
@@ -1160,8 +1216,11 @@ input[type="checkbox"]:focus + label:before {
 .star {
     width: 18px;
     height: 17px;
+    
     font-size: 0;
+    
     overflow: hidden;
+    
     background: url(../img/star.svg) no-repeat top left;
     background-size: 18px 17px;
 }

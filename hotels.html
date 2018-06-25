@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="container">
+        <div class="container">    
             <nav class="main-navigation">
                 <a class="main-header-logo" href="index.html">
                     <img src="img/logo.png" width="128" height="70" alt="Логотип Седона">
@@ -17,11 +17,12 @@
                     <li><a href="#">Информация</a></li>
                     <li><a href="#">Фото и видео</a></li>
                     <li><a href="#">Карта штата</a></li>
-                    <li><a class="site-navigation-current">Гостиницы</a></li>
+                    <li><a class="site-navigation-current active">Гостиницы</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main class="main-content">
         <div class="container">
             <h1 class="visually-hidden">Гостиницы в Седоне</h1>
@@ -39,7 +40,7 @@
                                 <label for="filter-parking" class="filter-checkbox">Парковка</label>
                             </li>
                             <li class="filter-option">
-                                <input type="checkbox" name="wifi" id="filter-wifi" class="visually-hidden" disabled>
+                                <input type="checkbox" name="wifi" id="filter-wifi" class="visually-hidden" disabled checked>
                                 <label for="filter-wifi" class="filter-checkbox">Wi-Fi</label>
                             </li>
                         </ul>
@@ -88,8 +89,8 @@
                     <li><a href="#" class="result-btn">по рейтингу</a></li>
                 </ul>
                 <div class="result-icon">
-                    <a class="result-icon-up" href="#"></a>
-                    <a class="result-icon-down result-active" href="#"></a>
+                    <a class="result-icon-up" href="#"><span class="visually-hidden">Сортировка по возрастанию</span></a>
+                    <a class="result-icon-down result-active" href="#"><span class="visually-hidden">Сортировка по убыванию</span></a>
                 </div>
             </section>
             <section class="hotels">
@@ -107,7 +108,7 @@
                             </div>
                         </div>
                         <div class="hotels-rate">
-                            <div class="rate-stars" aria-label="4*">
+                            <div class="rate-stars" aria-label="4 звезды">
                                 <span class="star">*</span>
                                 <span class="star">*</span>
                                 <span class="star">*</span>
@@ -128,7 +129,7 @@
                             </div>
                         </div>
                         <div class="hotels-rate"> 
-                            <div class="rate-stars" aria-label="3*">
+                            <div class="rate-stars" aria-label="3 звезды">
                                 <span class="star">*</span>
                                 <span class="star">*</span>
                                 <span class="star">*</span>
@@ -147,7 +148,7 @@
                                 <a href="#"class="btn booking-btn">Забронировать</a>
                             </div>
                         </div>
-                        <div class="hotels-rate" aria-label="2*">
+                        <div class="hotels-rate" aria-label="2 звезды">
                             <div class="rate-stars">
                                 <span class="star"></span>
                                 <span class="star"></span>
