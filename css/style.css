@@ -612,7 +612,7 @@ input[type="radio"].visually-hidden {
     border-radius: 1px;
     background-color: #a9a9a9;
 }
-.search-amount .amount-sign-plus::before{
+.search-amount .amount-sign-plus::before {
     content: "";
     position: absolute;
     top: 18px;
@@ -635,6 +635,21 @@ input[type="radio"].visually-hidden {
     
     border-radius: 1px;
     background-color: #a9a9a9;
+}
+
+.amount-sign-minus:hover::before,
+.amount-sign-plus:hover::before,
+.amount-sign-plus:hover::after,
+.amount-sign-minus:focus::before,
+.amount-sign-plus:focus::before,
+.amount-sign-plus:focus::after {
+    background-color: #000000;
+}
+
+.amount-sign-minus:active::before,
+.amount-sign-plus:active::before,
+.amount-sign-plus:active::after {
+    background-color: #81b3d2;
 }
 
 .btn-search {
