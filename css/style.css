@@ -430,9 +430,8 @@ input[type="radio"].visually-hidden {
     top: 0;
     left: 50%;
     
-    display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+    display: none;
+
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-orient: vertical;
@@ -449,6 +448,12 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     -webkit-box-shadow: 0 8px 15px rgba(0, 1, 1, 0.2);
             box-shadow: 0 8px 15px rgba(0, 1, 1, 0.2);
+}
+
+.search-form-show {
+    display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; 
 }
 
 .search-item {
