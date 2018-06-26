@@ -404,6 +404,8 @@ input[type="radio"].visually-hidden {
     padding: 30px 0;
     
     background-color: #766357;
+    
+    cursor: pointer;
 }
 
 .btn-search-hotels:hover,
@@ -587,8 +589,7 @@ input[type="radio"].visually-hidden {
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
-    
-    
+        
     opacity: 1;
 }
 
