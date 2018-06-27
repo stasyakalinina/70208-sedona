@@ -178,6 +178,10 @@ input[type="radio"].visually-hidden {
     top: 0;
     left: 50%;
     margin-left: -69px;
+    
+    z-index: 1;
+    
+    cursor: pointer;
 }
 
 .promo {
@@ -229,6 +233,8 @@ input[type="radio"].visually-hidden {
 .reason-content {
     width: 33.333%;
     padding: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     
     text-align: center;
 }
@@ -694,7 +700,7 @@ input[type="radio"].visually-hidden {
     
     color: #000000;
     
-    background-color: rgba(254, 254, 254, 0,9);
+    background-color: rgba(254, 254, 254, 0.9);
 }
 
 .footer-tag,
@@ -1277,39 +1283,12 @@ input[type="checkbox"]:focus + label::before {
 
 /*ANIMATION*/
 
-@-webkit-keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
-
   50% {
     opacity: 1;
   }
@@ -1321,7 +1300,6 @@ input[type="checkbox"]:focus + label::before {
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
   }
-
   50% {
     opacity: 1;
   }
