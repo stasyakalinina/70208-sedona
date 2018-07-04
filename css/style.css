@@ -477,6 +477,13 @@ input[type="radio"].visually-hidden {
             animation-duration: 0.6s;
 }
 
+.search-form-error {
+    -webkit-animation-name: shake;
+            animation-name: shake;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+}
+
 .search-item {
     position: relative;
     
@@ -697,9 +704,8 @@ input[type="radio"].visually-hidden {
     position: relative;
     z-index: 10;
     
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
+    min-height: 120px;
     margin-top: -120px;
 }
 
@@ -1322,5 +1328,55 @@ input[type="checkbox"]:focus + label::before {
   }
   50% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
   }
 }
