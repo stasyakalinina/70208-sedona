@@ -3,6 +3,8 @@ var form = document.querySelector(".search-form");
 var checkIn = form.querySelector("[name=check-in]");
 var checkOut = form.querySelector("[name=check-out]");
 
+form.classList.remove("search-form-show");
+
 button.addEventListener("click", function (evt) {
     evt.preventDefault();
     form.classList.toggle("search-form-show");
