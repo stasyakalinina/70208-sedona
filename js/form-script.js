@@ -6,6 +6,7 @@ var checkOut = form.querySelector("[name=check-out]");
 button.addEventListener("click", function (evt) {
     evt.preventDefault();
     form.classList.toggle("search-form-show");
+    form.classList.remove("search-form-error");
     checkIn.focus();
 });
 

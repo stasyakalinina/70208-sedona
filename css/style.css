@@ -199,6 +199,16 @@ input[type="radio"].visually-hidden {
 }
 
 .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 61px 40px;
     
     text-align: center;
@@ -208,6 +218,7 @@ input[type="radio"].visually-hidden {
 }
 
 .intro-title {
+    width: 440px;
     margin-bottom: 38px;
     
     font-size: 21px;
@@ -217,6 +228,7 @@ input[type="radio"].visually-hidden {
 }
 
 .intro-text {
+    width: 490px;
     line-height: 26px;
 }
 
@@ -244,6 +256,7 @@ input[type="radio"].visually-hidden {
 }
 
 .reason-text {
+/*    max-width: 275px;*/
     margin-top: 30px;
 }
 
@@ -433,12 +446,14 @@ input[type="radio"].visually-hidden {
     display: flex;
     
     background: #a5a89d;
-    background-image: url(../img/map.png);
+    background-image: url(../img/map.jpg);
     background-repeat: no-repeat;
 }
 .map iframe {
     width: 100%;
     height: 593px;
+    
+    border: 0;
 }
 
 .search-form {
@@ -713,9 +728,6 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -734,11 +746,11 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-tag {
-    margin-left: 60px;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
     color: #000000;
+    text-align: center;
 }
 
 .footer-social {
@@ -782,15 +794,12 @@ input[type="radio"].visually-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 36px;
-    
-    text-align: right;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     line-height: 26px;
 }
 
