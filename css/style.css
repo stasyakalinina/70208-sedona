@@ -57,8 +57,7 @@ input[type="radio"].visually-hidden {
     white-space: nowrap;
     
     -webkit-clip-path: inset(100%);
-    
-            clip-path: inset(100%);
+                clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -113,8 +112,8 @@ input[type="radio"].visually-hidden {
     
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-left: 72px;
-    padding-right: 72px;
+    padding-left: 6%;
+    padding-right: 6%;
     
     background-color: #ffffff;
 }
@@ -259,7 +258,7 @@ input[type="radio"].visually-hidden {
             justify-content: center;
 
     width: 33.333%;
-    padding: 45px 4% 35px;
+    padding: 20px 4%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     
@@ -290,10 +289,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-}
-
-.reason-img img {
-    margin-top: -10%;
 }
 
 .reason-2 .reason-content {
