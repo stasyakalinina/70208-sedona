@@ -1261,6 +1261,10 @@ input[type="checkbox"]:focus + label::before {
     justify-content: space-between;
 }
 
+.rate-stars {
+    min-height: 17px;
+}
+
 .rate-stars::before {
     position: absolute;
     top: 0;
